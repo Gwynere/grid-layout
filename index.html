@@ -5,85 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Grid Layout</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 </head>
 <body>
     <header id="header">
-        <nav>
-            <div id="logo">Logo</div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="box-big">
-            <img src="images/home-img.jpg" alt="">
-        </div>
-        <div class="box-big">
-            <small>Welcome to my Website</small>
-            <h1>Hello, I am Stimulus currently based in New York city.</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque soluta dolores rem saepe voluptatem delectus, quam sunt assumenda asperiores consequatur!</p>
-            <button class="btn">Read More</button>
+        <div class="container">
+            <nav id="nav">
+                <span class="navbar-toggle" id="js-navbar-toggle"><i class="fas fa-bars"></i></span>
+                <div id="logo">Logo</div>
+                <ul class="main-nav" id="js-menu">
+                    <li><a href="#" class="nav-links">Home</a></li>
+                    <li><a href="#" class="nav-links">About</a></li>
+                    <li><a href="#" class="nav-links">Projects</a></li>
+                    <li><a href="#" class="nav-links">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="box-img">
+                <img src="images/home-img.jpg" alt="">
+            </div>
+            <div id="header-content" class="box-padding">
+                <small>Welcome to my Website</small>
+                <h1>Hello, I am Stimulus currently based in New York city.</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque soluta dolores rem saepe voluptatem delectus, quam sunt assumenda asperiores consequatur!</p>
+                <button class="btn">Read More</button>
+            </div>
         </div>
     </header>
 
     <!-- ABOUT SECTION -->
     <section id="about">
-        <div class="box-medium">
+        <div class="container">
+        <div id="about-content" class="box-padding">
             <h2>About Me</h2>
             <small>Sit amet consectetur.</small>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, corporis ullam quae molestias sunt dolore? Esse tenetur nemo ullam harum.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, corporis ullam quae molestias sunt dolore? Esse tenetur nemo ullam harum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, corporis ullam quae molestias sunt dolore? Esse tenetur nemo ullam harum.</p>
         </div>
-        <div class="box-small">
+        <div class="box-img">
             <img src="images/about-img.jpg" alt="">
         </div>
-        <div class="box-small">
-            <h3>My Skills</h3>
+        <div id="skills-content" class="box-padding">
+            <h2>My Skills</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos natus rerum laborum velit maiores inventore nam est explicabo nobis ipsa.</p>
         </div>
-        <div class="box-small">
+        <div class="skill-box box-padding">
             <span><i class="fas fa-desktop"></i></span>
             <h3>Interface Design</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos natus rerum laborum velit maiores inventore nam est explicabo nobis ipsa.</p>
         </div>
-        <div class="box-small">
+        <div class="skill-box box-padding">
             <span><i class="fas fa-desktop"></i></span>
             <h3>Media Strategy</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos natus rerum laborum velit maiores inventore nam est explicabo nobis ipsa.</p>
         </div>
-        <div class="box-small">
+        <div class="skill-box box-padding">
             <span><i class="fas fa-desktop"></i></span>
             <h3>Mobile App</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos natus rerum laborum velit maiores inventore nam est explicabo nobis ipsa.</p>
         </div>
-        <div class="box-small">
+        <div class="skill-box box-padding">
             <span><i class="fas fa-desktop"></i></span>
             <h3>Coding</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos natus rerum laborum velit maiores inventore nam est explicabo nobis ipsa.</p>
         </div>
+    </div>
     </section>
 
     <!-- EXPERIENCE & EDUCATION -->
     <section id="exp-edu">
 
         <!-- experience img -->
-        <div class="box-medium">
+        <div class="box-img">
             <img src="images/experience-img.jpg" alt="">
         </div>
 
         <!-- experience -->
-        <div class="box-medium">
+        <div class="box-medium box-padding">
             <h3>My Experience</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, illum.</p>
 
-            <div class="box-content">
+            <div class="box-padding">
                 <h4>Graphic Designer</h4>
                 <small>2014 Jul - 2015 Sep</small>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, explicabo.</p>
             </div>
 
-            <div class="box-content">
+            <div class="box-padding">
                 <h4> Designer</h4>
                 <small>2014 Jul - 2015 Sep</small>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, explicabo.</p>
@@ -91,17 +99,17 @@
         </div>
 
         <!-- education -->
-        <div class="content box-medium">
+        <div class="box-medium box-padding">
             <h3>My Education</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, illum.</p>
 
-            <div class="box-content">
+            <div class="box-padding">
                 <h4>Master in Design</h4>
                 <small>2014 Jul - 2015 Sep</small>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, explicabo.</p>
             </div>
 
-            <div class="box-content">
+            <div class="box-padding">
                 <h4> Bachelor in Design</h4>
                 <small>2014 Jul - 2015 Sep</small>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, explicabo.</p>
@@ -109,14 +117,14 @@
         </div>
 
         <!-- education img  -->
-        <div class="box-medium box-img">
+        <div class="box-img">
             <img src="./images/education-img.jpg" alt="">
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section id="contact">
-        <div class="box-big">
+        <div class="box-big box-padding">
             <h3>Say hello..</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, pariatur.</p>
             <form action="POST">
@@ -127,11 +135,11 @@
             </form>
         </div>
 
-        <div class="box-big">
+        <div class="box-img">
             <img src="./images/contact-img.jpg" alt="">
         </div>
 
-        <div class="box-big">
+        <div class="box-big box-padding">
             <div class="box-mini">
                 <h4>Visit my Office</h4>
                 <p>456 New Street 22000 <br> New York City, USA</p>
@@ -154,5 +162,21 @@
         </div>
         </div>
     </section>
+
+    <!-- FOOTER SECTION -->
+    <footer id="footer">
+        <div class="container">
+                <p>Copyright © 2016 Your Company Design: templatemo</p>
+                <div class="box-links">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github-square"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+        </div>
+    </footer>
+
+<script src="custom.js"></script>
 </body>
 </html>
