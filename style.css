@@ -1,6 +1,7 @@
 :root{
     --main-color: #44BBA4;
     --secondary-color: #E7BB41;
+    --tertiary-color: #EF1726;
     --main-white: #E7E5DF;
     --main-grey: #D3D0CB;
     --main-black: #393E41;
@@ -16,6 +17,14 @@
 
 body{
     background: var(--main-white);
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-black);
+    font-weight: bold;
+    padding-left: .5rem;
+    padding-bottom: .5rem;
 }
 
 .container{
@@ -122,11 +131,69 @@ small{
     grid-auto-rows: auto;
 }
 
+
+.progress-bar{
+    width: 100%;
+    background: var(--main-grey);
+}
+
+.progress{
+    height: .2rem;
+    background: var(--main-color);
+    margin: .5rem 0;
+    padding: .2rem 0;
+}
+
+.skill-content{
+    padding: .5rem 0;
+}
+
+#skills-content{
+    background: var(--secondary-color);
+}
+
+
 .skill-box{
     text-align: center;
 }
 
+#skills .skill-box:nth-child(1){
+    background: var(--secondary-color);
+    color: white;
+}
+
+#skills .skill-box:nth-child(2){
+    background: var(--tertiary-color);
+    color: white;
+}
+
+#skills .skill-box:nth-child(3){
+    background: var(--main-black);
+    color: white;
+}
+
+/* EXPERIENCE & EDUCATION */
+#exp{
+    background: var(--tertiary-color);
+    color: white;
+}
+
+#edu{
+    background: var(--main-color);
+    color: white;
+}
+
 /* FORM */
+#contact{
+    background: var(--main-black);
+    color: white;
+}
+
+#form{
+    background: var(--secondary-color);
+    color: white;
+}
+
 form input, textarea{
     background: transparent;
     border: none;
@@ -139,17 +206,47 @@ form input, textarea{
 }
 
 form input::placeholder, textarea::placeholder{
-    color: var(--main-black);
+    color: var(--main-white);
 }
 
 form input:active, input:focus, textarea:active, textarea:focus{
-    border-bottom: 1px solid var(--main-black);
+    border-bottom: 1px solid var(--main-white);
 }
 
 form .btn{
     width: 100%;
 }
 
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.flex span{
+    padding-right: 1rem;
+}
+
+/* FOOTER */
+#footer{
+    padding: 2rem;
+}
+
+#footer .container p{
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.box-links{
+   text-align: center;
+}
+
+.box-links a{
+    padding: .3rem;
+    font-size: 2rem;
+}
+
+/* ACTIVE */
 .active{
     display: block;
 }
