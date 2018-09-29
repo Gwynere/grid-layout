@@ -104,17 +104,21 @@ small{
 /* HEADER */
 #header{
     position: relative;
-    background: var(--main-color);
+    
     color: var(--main-white);
+}
+
+#header-content{
+    background: var(--main-color);
 }
 
 #header .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: auto;
 }
 
-.box-img{
+#header-img{
     height: 100vh;
 }
 
@@ -127,10 +131,13 @@ small{
 /* ABOUT */
 #about .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr minmax(300px, 1fr);
     grid-auto-rows: auto;
 }
 
+#about-content{
+    grid-column: 1/3;
+}
 
 .progress-bar{
     width: 100%;
@@ -157,22 +164,31 @@ small{
     text-align: center;
 }
 
-#skills .skill-box:nth-child(1){
+#design{
     background: var(--secondary-color);
     color: white;
 }
 
-#skills .skill-box:nth-child(2){
+#media{
     background: var(--tertiary-color);
     color: white;
 }
 
-#skills .skill-box:nth-child(3){
+#mobile{
     background: var(--main-black);
     color: white;
 }
 
 /* EXPERIENCE & EDUCATION */
+#exp-edu{
+    width: 100%;
+}
+#exp-edu .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+}
+
 #exp{
     background: var(--tertiary-color);
     color: white;
@@ -183,10 +199,16 @@ small{
     color: white;
 }
 
-/* FORM */
+/* CONTACT & FORM */
 #contact{
     background: var(--main-black);
     color: white;
+}
+
+#contact .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: auto;
 }
 
 #form{
@@ -231,6 +253,12 @@ form .btn{
     padding: 2rem;
 }
 
+#footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+}
+
 #footer .container p{
     text-align: center;
     font-size: .8rem;
@@ -249,4 +277,26 @@ form .btn{
 /* ACTIVE */
 .active{
     display: block;
+}
+
+@media only screen and (min-width: 600px){
+    #header-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .skill-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    #about-content{
+        grid-column: 1/2;
+    }
+
+    
 }
