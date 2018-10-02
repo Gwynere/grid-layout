@@ -172,15 +172,24 @@ small{
 }
 
 /* EXPERIENCE & EDUCATION */
-
-#exp{
+#experience{
     background: var(--tertiary-color);
     color: white;
 }
 
-#edu{
+#exp{    
+    align-self: center;
+    justify-self: center;
+}
+
+#education{
     background: var(--main-color);
     color: white;
+}
+
+#edu{
+    align-self: center;
+    justify-self: center;
 }
 
 /* CONTACT & FORM */
@@ -203,6 +212,7 @@ form input, textarea{
     font-size: .9rem;
     outline: none;
     width: 100%;
+    resize: none;
 }
 
 form input::placeholder, textarea::placeholder{
@@ -235,10 +245,6 @@ form .btn{
 }
 
 /* FOOTER */
-#footer .container{
-    padding: .5rem;
-}
-
 #footer .container p{
     text-align: center;
     font-size: .8rem;
@@ -263,9 +269,11 @@ form .btn{
     .container{
         grid-template-columns: repeat(2, 1fr);
     }
+
     #contact .container{
         grid-template-columns: 1fr 1fr 1fr;
     }
+
     #header-content{
         display: flex;
         flex-direction: column;
@@ -305,5 +313,19 @@ form .btn{
 
     #contact .container{
         grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    #education .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #experience .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #footer .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 }
