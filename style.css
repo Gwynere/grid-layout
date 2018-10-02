@@ -135,8 +135,11 @@ small{
 /* ABOUT */
 #about .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+}
+
+#about-content{
+    align-self: center;
 }
 
 .progress-bar{
@@ -159,6 +162,11 @@ small{
     background: var(--secondary-color);
 }
 
+/* SERVICES */
+#service .container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 .skill-box{
     text-align: center;
@@ -207,7 +215,7 @@ small{
 
 #contact .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 #form{
@@ -256,14 +264,11 @@ form .btn{
 }
 
 /* FOOTER */
-#footer{
-    padding: 2rem;
-}
-
 #footer .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: auto;
+    padding: .5rem;
 }
 
 #footer .container p{
@@ -287,16 +292,30 @@ form .btn{
 }
 
 @media only screen and (min-width: 600px){
+    
     #header-content{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
+    #about .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #about-content{
+        grid-column: auto / span 2;
+    }
+    
     .skill-box{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    #service .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .box-img{
@@ -311,6 +330,16 @@ form .btn{
     }
 }
 
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1024px){
+    #about .container{
+        grid-template-columns: repeat(4, 1fr);
+    }
 
+    #about-content{
+        grid-column: auto / span 2;
+    }
+
+    #service .container{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
