@@ -1,8 +1,8 @@
 :root{
-    --main-color: #44BBA4;
-    --secondary-color: #E7BB41;
-    --tertiary-color: #EF1726;
-    --main-white: #E7E5DF;
+    --main-color: rgba(30, 145, 214, 1);
+    --secondary-color: rgba(228, 204, 55, 1);
+    --tertiary-color: rgba(143, 201, 58, 1);
+    --main-white: rgb(245, 244, 240);
     --main-grey: #D3D0CB;
     --main-black: #393E41;
     --main-bg: #a5a5a5;
@@ -23,8 +23,11 @@ a{
     text-decoration: none;
     color: var(--main-black);
     font-weight: bold;
-    padding-left: .5rem;
-    padding-bottom: .5rem;
+    outline: none;
+}
+
+ul>li{
+    margin: 1rem;
 }
 
 .container{
@@ -50,9 +53,11 @@ p{
 
 small{
     color: var(--secondary-color);
+    font-weight: bold;
 }
 
 .btn{
+    display: inline-block;
     outline: none;
     border: 2px solid var(--main-white);
     font-size: 1rem;
@@ -149,6 +154,7 @@ small{
 
 #skills-content{
     background: var(--secondary-color);
+    color: white;
 }
 
 /* SERVICES */
@@ -260,9 +266,20 @@ form .btn{
     font-size: 2rem;
 }
 
-/* ACTIVE */
+/* MAGICS THINGS ! */
 .active{
     display: block;
+}
+
+.fixed-nav #nav{
+    position: fixed;
+    background: var(--main-black);
+    color: var(--main-white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.fixed-nav #nav ul>li>a{
+    color: var(--main-white);
 }
 
 @media only screen and (min-width: 600px){
@@ -270,6 +287,45 @@ form .btn{
         grid-template-columns: repeat(2, 1fr);
     }
 
+    #nav{
+        display: flex;
+        justify-content: space-around;
+        background: none;
+        color: white;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    #nav span{
+        display: none;
+    }
+
+    #nav ul{
+        display: flex;
+        text-align: center;
+    }
+
+    ul>li{
+        margin: 0;
+    }
+
+    #nav a{
+        color: white;
+        position: relative;
+    }
+
+    #nav a::after{
+        display:block;
+        content: '';
+        border-bottom: solid 2px var(--secondary-color);  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+    }
+
+    #nav a:hover::after{
+        transform: scaleX(1);
+    }
+    
     #contact .container{
         grid-template-columns: 1fr 1fr 1fr;
     }
