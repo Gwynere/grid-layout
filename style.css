@@ -280,6 +280,24 @@ form .btn{
         justify-content: center;
     }
 
+    #nav{
+        display: flex;
+        justify-content: space-around;
+        background: none;
+        color: white;
+    }
+
+    #nav span{
+        display: none;
+    }
+
+    #nav ul{
+        display: flex;
+    }
+    #nav a{
+        color: white;
+    }
+
     #about-content{
         grid-column: auto / span 2;
     }
