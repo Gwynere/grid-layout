@@ -1,11 +1,15 @@
 :root{
-    --main-color: #44BBA4;
+    /* --main-color: #44BBA4;
     --secondary-color: #E7BB41;
-    --tertiary-color: #EF1726;
-    --main-white: #E7E5DF;
+    --tertiary-color: #EF1726; */
+    --main-white: rgb(233, 233, 233);
     --main-grey: #D3D0CB;
     --main-black: #393E41;
     --main-bg: #a5a5a5;
+
+    --main-color: rgb(88, 88, 88);
+    --secondary-color: rgb(157, 157, 157);
+    --tertiary-color: rgb(54, 54, 54);
 }
 
 *{
@@ -13,6 +17,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 }
 
 body{
@@ -34,10 +39,11 @@ a{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+    border: 1px solid #D3D0CB;
 }
 
 .box-padding{
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .box-padding2{
@@ -110,10 +116,11 @@ small{
 }
 
 /* HEADER */
-#header{
+#header .container{
     position: relative;
     color: var(--main-white);
     background: var(--main-color);
+    border: none;
 }
 
 #header-img, .box-img{
@@ -128,7 +135,8 @@ small{
 
 /* ABOUT */
 #about-content{
-    align-self: center;
+    align-self: stretch;
+    background: #fff;
 }
 
 .progress-bar{
@@ -148,31 +156,23 @@ small{
 }
 
 #skills-content{
-    background: var(--secondary-color);
+    background: #fff;
 }
 
 /* SERVICES */
+#service .container{
+    grid-gap: 2rem;
+    border: none;
+}
+
 .skill-box{
     text-align: center;
-}
-
-#design{
-    background: var(--secondary-color);
-    color: white;
-}
-
-#media{
-    background: var(--tertiary-color);
-    color: white;
-}
-
-#mobile{
-    background: var(--main-black);
-    color: white;
+    background: #fff;
+    border: 1px solid #D3D0CB;
 }
 
 /* EXPERIENCE & EDUCATION */
-#experience{
+#experience .container{
     background: var(--tertiary-color);
     color: white;
 }
@@ -182,7 +182,7 @@ small{
     justify-self: center;
 }
 
-#education{
+#education .container{
     background: var(--main-color);
     color: white;
 }
@@ -323,10 +323,16 @@ form .btn{
 @media only screen and (min-width: 1024px){
     .container{
         grid-template-columns: repeat(4, 1fr);
+        width: 80%;
     }
 
     #header .container{
         grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .container{
+        margin-bottom: 3rem;
     }
 
     #contact .container{
